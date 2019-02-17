@@ -1,0 +1,35 @@
+{
+  "name": "starter-service",
+  "version": "1.0.0",
+  "description": "A starter microservice",
+  "private": true,
+  "engines": {
+    "node": "^10.12.0"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "start:cluster": "sl-run server/server.js",
+    "debug": "node --debug server/server.js",
+    "test": "istanbul cover cucumber-js -- test/features/*feature --require test/support/ --report cobertura --report html --tags \"not @leave\""
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "~1.4.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "nconf": "^0.10.0",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^5.0.2",
+    "cucumber-pretty": "^1.4.1",
+    "istanbul": "^0.4.5",
+    "morgan": "^1.9.0",
+    "supertest": "^3.1.0"
+  }
+}
