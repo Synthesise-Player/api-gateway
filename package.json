@@ -4,7 +4,7 @@
   "description": "A starter microservice",
   "private": true,
   "engines": {
-    "node": "^10.12.0"
+    "node": "11.10.0"
   },
   "scripts": {
     "start": "node server/server.js",
