@@ -4,8 +4,6 @@ let tokenExpiry = -1
 let token = null
 
 async function updateOauthToken() {
-    console.log('Updating token')
-    console.log(process.env.SPOTIFY);
     var options = {
         method: 'POST',
         uri: 'https://accounts.spotify.com/api/token',
@@ -19,7 +17,6 @@ async function updateOauthToken() {
         json: true
     };
     body = await rp(options)
-    console.log('Updated')
 
     // Set expiry time to be expiry time - 1s to allow time for search
     tokenExpiry = new Date().getTime() + (body.expires_in - 1) * 1000
